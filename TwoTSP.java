@@ -18,9 +18,20 @@ public class TwoTSP {
     }
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Welcome to the solution of the project!");
+        System.out.println("To select input files from the Inputs folder, please enter the file name with the extension.");
+        System.out.println("For example, to select 'example-input-1.txt', enter 'Inputs/example-input-1.txt'\n");
         // Read input
-        String inputFileName = "Inputs/example-input-3.txt";
-        String outputFileName = "sinan-output-3.txt";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the input file path: ");
+        String inputFileName = scanner.nextLine();
+
+        //String inputFileName = "Inputs/example-input-1.txt";
+        System.out.print("Enter the output file path: ");
+        String outputFileName = scanner.nextLine();
+
+        //String outputFileName = "sinan-output-3.txt";
         List<City> cities = readCitiesFromFile(inputFileName);
         int numCities = cities.size();
 
